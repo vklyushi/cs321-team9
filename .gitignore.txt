@@ -1,13 +1,53 @@
-# Ignore Eclipse project settings
-.settings/
-.classpath
-.project
-
-# Ignore build output
-build/
-target/
-
-# Ignore system files
-*.log
+# ======================================================
+# General
+# ======================================================
 .DS_Store
 Thumbs.db
+*.log
+
+# ======================================================
+# IDE / Editor files
+# ======================================================
+.vscode/
+.idea/
+*.iml
+
+# ======================================================
+# Java / Maven backend
+# ======================================================
+backend/target/
+backend/*.war
+backend/*.jar
+backend/.settings/
+backend/.classpath
+backend/.project
+
+# If you ever accidentally copied Jetty libs into backend
+backend/src/main/webapp/WEB-INF/lib/
+
+# ======================================================
+# Node / React frontend
+# ======================================================
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# Package lock backups
+frontend/package-lock.json.*
+yarn.lock
+
+# ======================================================
+# Build artifacts
+# ======================================================
+*.class
+*.war
+*.jar
+*.ear
+
+# ======================================================
+# OS files
+# ======================================================
+Desktop.ini
+ehthumbs.db
