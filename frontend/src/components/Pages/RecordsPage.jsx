@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import RecordsTable from "../RecordsTable/RecordsTable.jsx";
 
-
 const TITLES = {
     allergies: "Allergies",
     bloodwork: "Bloodwork",
@@ -24,26 +23,25 @@ export default function RecordsPage() {
 
     const userid = Number(localStorage.getItem("userid"));
 
-    useEffect(() => {
-        async function load() {
-            setLoading(true);
-
-            try {
-                const res = await fetch(
-                    `http://localhost:8080/api/records?category=${category}&userid=${userid}`
-                );
-
-                const json = await res.json();
-                setRows(Array.isArray(json) ? json : []);
-            } catch (e) {
-                console.error(e);
-                setRows([]);
-            }
-
-            setLoading(false);
+    // ---------- RELOAD FUNCTION ----------
+    async function reload() {
+        setLoading(true);
+        try {
+            const res = await fetch(
+                `http://localhost:8080/api/records?category=${category}&userid=${userid}`
+            );
+            const json = await res.json();
+            setRows(Array.isArray(json) ? json : []);
+        } catch (e) {
+            console.error(e);
+            setRows([]);
         }
+        setLoading(false);
+    }
 
-        load();
+    // Load when category changes
+    useEffect(() => {
+        reload();
     }, [category]);
 
 
@@ -73,7 +71,7 @@ export default function RecordsPage() {
             ) : rows.length === 0 ? (
                 <div>No records found.</div>
             ) : (
-                <RecordsTable rows={rows} />
+                <RecordsTable rows={rows} reload={reload} />
             )}
         </div>
     );

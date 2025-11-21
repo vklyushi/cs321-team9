@@ -1,0 +1,38 @@
+
+
+To run locally:
+
+In:
+
+C:\Users\Forte\OneDrive\Desktop\GMU SE Project\gmu_workspace_v3\cs321-team9\frontend 
+
+go to this address in cmd and run:
+
+npm run dev
+
+In (on desktop at home):
+
+C:\jetty 
+
+In (laptop): 
+
+C:\Users\Forte\OneDrive\Desktop\GMU SE Project\jetty
+
+
+In case there are any changes in the servlets, recompile:
+javac -cp ".;lib/*" *.java
+
+go to this address in the cmd and run 
+
+java -cp "lib/*;." EmbeddedServer
+
+
+The local host address from the front end is where the site can be accessed. 
+
+
+Required installs: 
+
+node.js for npm
+java sdk 21
+
+workbench to show database on railway
