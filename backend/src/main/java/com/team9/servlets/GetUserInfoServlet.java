@@ -18,7 +18,7 @@ public class GetUserInfoServlet extends HttpServlet {
     private static final String PASS = "xlLnDOFxroMxPrsYFLbhVVGvdXfOhBQy";
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+    public void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
         resp.setContentType("application/json");

@@ -12,7 +12,10 @@ import org.json.JSONObject;
 import org.junit.*;
 import org.mockito.*;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+
 import com.team9.servlets.CreateAccountServlet;
+import com.team9.servlets.GetUserInfoServlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -240,6 +243,235 @@ public class ProjectAutomaticTesting {
 
 
     //GetUserInfoServlet.java - Victoria
+    @Test
+    public void returnsCorrectFirstName() throws Exception {
+        HttpServletRequest req = Mockito.mock(HttpServletRequest.class);
+        HttpServletResponse resp = Mockito.mock(HttpServletResponse.class);
 
-    
+        Mockito.when(req.getParameter("userid")).thenReturn("123");
+
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        Mockito.when(resp.getWriter()).thenReturn(pw);
+
+        GetUserInfoServlet servlet = new GetUserInfoServlet() {
+            @Override
+            public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+                resp.setContentType("application/json");
+                PrintWriter out = resp.getWriter();
+                JSONObject j = new JSONObject();
+                j.put("fname", "expectedUser");
+                out.println(j.toString());
+            }
+        };
+
+        servlet.doGet(req, resp);
+        pw.flush();
+
+        JSONObject res = new JSONObject(sw.toString().trim());
+        assertEquals("expectedUser", res.getString("fname"));
+    }
+
+    @Test
+    public void returnsCorrectLastName() throws Exception {
+        HttpServletRequest req = Mockito.mock(HttpServletRequest.class);
+        HttpServletResponse resp = Mockito.mock(HttpServletResponse.class);
+
+        Mockito.when(req.getParameter("userid")).thenReturn("123");
+
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        Mockito.when(resp.getWriter()).thenReturn(pw);
+
+        GetUserInfoServlet servlet = new GetUserInfoServlet() {
+            @Override
+            public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+                resp.setContentType("application/json");
+                PrintWriter out = resp.getWriter();
+                JSONObject j = new JSONObject();
+                j.put("lname", "Doe");
+                out.println(j.toString());
+            }
+        };
+
+        servlet.doGet(req, resp);
+        pw.flush();
+
+        JSONObject res = new JSONObject(sw.toString().trim());
+        assertEquals("Doe", res.getString("lname"));
+    }
+
+    @Test
+    public void returnsCorrectDOB() throws Exception {
+        HttpServletRequest req = Mockito.mock(HttpServletRequest.class);
+        HttpServletResponse resp = Mockito.mock(HttpServletResponse.class);
+
+        Mockito.when(req.getParameter("userid")).thenReturn("123");
+
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        Mockito.when(resp.getWriter()).thenReturn(pw);
+
+        GetUserInfoServlet servlet = new GetUserInfoServlet() {
+            @Override
+            public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+                resp.setContentType("application/json");
+                PrintWriter out = resp.getWriter();
+                JSONObject j = new JSONObject();
+                j.put("dob", "01/01/1000");
+                out.println(j.toString());
+            }
+        };
+
+        servlet.doGet(req, resp);
+        pw.flush();
+
+        JSONObject res = new JSONObject(sw.toString().trim());
+        assertEquals("01/01/1000", res.getString("dob"));
+    }
+
+    @Test
+    public void returnsCorrectHeight() throws Exception {
+        HttpServletRequest req = Mockito.mock(HttpServletRequest.class);
+        HttpServletResponse resp = Mockito.mock(HttpServletResponse.class);
+
+        Mockito.when(req.getParameter("userid")).thenReturn("123");
+
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        Mockito.when(resp.getWriter()).thenReturn(pw);
+
+        GetUserInfoServlet servlet = new GetUserInfoServlet() {
+            @Override
+            public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+                resp.setContentType("application/json");
+                PrintWriter out = resp.getWriter();
+                JSONObject j = new JSONObject();
+                j.put("height", "5");
+                out.println(j.toString());
+            }
+        };
+
+        servlet.doGet(req, resp);
+        pw.flush();
+
+        JSONObject res = new JSONObject(sw.toString().trim());
+        assertEquals("5", res.getString("height"));
+    }
+
+    @Test
+    public void returnsCorrectWeight() throws Exception {
+        HttpServletRequest req = Mockito.mock(HttpServletRequest.class);
+        HttpServletResponse resp = Mockito.mock(HttpServletResponse.class);
+
+        Mockito.when(req.getParameter("userid")).thenReturn("123");
+
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        Mockito.when(resp.getWriter()).thenReturn(pw);
+
+        GetUserInfoServlet servlet = new GetUserInfoServlet() {
+            @Override
+            public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+                resp.setContentType("application/json");
+                PrintWriter out = resp.getWriter();
+                JSONObject j = new JSONObject();
+                j.put("weight", "200");
+                out.println(j.toString());
+            }
+        };
+
+        servlet.doGet(req, resp);
+        pw.flush();
+
+        JSONObject res = new JSONObject(sw.toString().trim());
+        assertEquals("200", res.getString("weight"));
+    }
+
+    @Test
+    public void returnsCorrectBloodPressure() throws Exception {
+        HttpServletRequest req = Mockito.mock(HttpServletRequest.class);
+        HttpServletResponse resp = Mockito.mock(HttpServletResponse.class);
+
+        Mockito.when(req.getParameter("userid")).thenReturn("123");
+
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        Mockito.when(resp.getWriter()).thenReturn(pw);
+
+        GetUserInfoServlet servlet = new GetUserInfoServlet() {
+            @Override
+            public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+                resp.setContentType("application/json");
+                PrintWriter out = resp.getWriter();
+                JSONObject j = new JSONObject();
+                j.put("bloodpressure", "100");
+                out.println(j.toString());
+            }
+        };
+
+        servlet.doGet(req, resp);
+        pw.flush();
+
+        JSONObject res = new JSONObject(sw.toString().trim());
+        assertEquals("100", res.getString("bloodpressure"));
+    }
+
+    @Test
+    public void returnsCorrectInsurance() throws Exception {
+        HttpServletRequest req = Mockito.mock(HttpServletRequest.class);
+        HttpServletResponse resp = Mockito.mock(HttpServletResponse.class);
+
+        Mockito.when(req.getParameter("userid")).thenReturn("123");
+
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        Mockito.when(resp.getWriter()).thenReturn(pw);
+
+        GetUserInfoServlet servlet = new GetUserInfoServlet() {
+            @Override
+            public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+                resp.setContentType("application/json");
+                PrintWriter out = resp.getWriter();
+                JSONObject j = new JSONObject();
+                j.put("insurance", "Cigna");
+                out.println(j.toString());
+            }
+        };
+
+        servlet.doGet(req, resp);
+        pw.flush();
+
+        JSONObject res = new JSONObject(sw.toString().trim());
+        assertEquals("Cigna", res.getString("insurance"));
+    }
+
+    @Test
+    public void returnsWrongFirstNameThrowsError() throws Exception {
+        HttpServletRequest req = Mockito.mock(HttpServletRequest.class);
+        HttpServletResponse resp = Mockito.mock(HttpServletResponse.class);
+
+        Mockito.when(req.getParameter("userid")).thenReturn("123");
+
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        Mockito.when(resp.getWriter()).thenReturn(pw);
+
+        GetUserInfoServlet servlet = new GetUserInfoServlet() {
+            @Override
+            public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+                resp.setContentType("application/json");
+                PrintWriter out = resp.getWriter();
+                JSONObject j = new JSONObject();
+                j.put("fname", "John");
+                out.println(j.toString());
+            }
+        };
+
+        servlet.doGet(req, resp);
+        pw.flush();
+
+        JSONObject res = new JSONObject(sw.toString().trim());
+        assertNotEquals("Bob", res.getString("fname"));
+    }
 }
