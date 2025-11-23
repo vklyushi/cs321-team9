@@ -1,3 +1,5 @@
+package com.team9.servlets;
+
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.ServletException;
