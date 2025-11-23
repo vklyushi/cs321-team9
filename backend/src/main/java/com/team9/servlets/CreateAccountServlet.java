@@ -19,7 +19,7 @@ public class CreateAccountServlet extends HttpServlet {
     private static final String PASS = "xlLnDOFxroMxPrsYFLbhVVGvdXfOhBQy";
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+	public void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
         resp.setContentType("text/plain");
