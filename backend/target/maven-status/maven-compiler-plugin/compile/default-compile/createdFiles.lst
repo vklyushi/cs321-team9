@@ -1,6 +1,6 @@
-GetUserInfoServlet.class
-RecordsServlet.class
-EmbeddedServer.class
-CreateAccountServlet.class
-SearchServlet.class
-LoginServlet.class
+com\team9\servlets\GetUserInfoServlet.class
+com\team9\servlets\LoginServlet.class
+com\team9\servlets\EmbeddedServer.class
+com\team9\servlets\RecordsServlet.class
+com\team9\servlets\SearchServlet.class
+com\team9\servlets\CreateAccountServlet.class
