@@ -15,10 +15,11 @@ import java.util.Map;
 @WebServlet("/api/records")
 public class RecordsServlet extends HttpServlet {
 
-    private static final String URL  = "jdbc:mysql://turntable.proxy.rlwy.net:44955/gmu";
-    private static final String USER = "root";
-    private static final String PASS = "xlLnDOFxroMxPrsYFLbhVVGvdXfOhBQy";
+    private static final String URL =
+    "jdbc:mysql://shortline.proxy.rlwy.net:54581/gmu";
 
+private static final String USER = "root";
+private static final String PASS = "xlLnDOFxroMxPrsYFLbhVVGvdXfOhBQy";
     private static final Gson gson = new Gson();
 
     /** Mapping category → SQL table name **/

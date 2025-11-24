@@ -11,9 +11,12 @@ import java.sql.*;
 @WebServlet("/api/login")
 public class LoginServlet extends HttpServlet {
 
-    private static final String URL = "jdbc:mysql://turntable.proxy.rlwy.net:44955/gmu";
-    private static final String USER = "root";
-    private static final String PASS = "xlLnDOFxroMxPrsYFLbhVVGvdXfOhBQy";
+    private static final String URL =
+    "jdbc:mysql://shortline.proxy.rlwy.net:54581/gmu";
+
+private static final String USER = "root";
+private static final String PASS = "xlLnDOFxroMxPrsYFLbhVVGvdXfOhBQy";
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)

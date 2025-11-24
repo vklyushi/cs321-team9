@@ -13,12 +13,14 @@ import org.json.JSONObject;
 @WebServlet("/api/user/info")
 public class GetUserInfoServlet extends HttpServlet {
 
-    private static final String URL = "jdbc:mysql://turntable.proxy.rlwy.net:44955/gmu";
-    private static final String USER = "root";
-    private static final String PASS = "xlLnDOFxroMxPrsYFLbhVVGvdXfOhBQy";
+    private static final String URL =
+    "jdbc:mysql://shortline.proxy.rlwy.net:54581/gmu";
+
+private static final String USER = "root";
+private static final String PASS = "xlLnDOFxroMxPrsYFLbhVVGvdXfOhBQy";
 
     @Override
-    public void doGet(HttpServletRequest req, HttpServletResponse resp)
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
         resp.setContentType("application/json");

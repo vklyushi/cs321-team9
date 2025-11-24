@@ -15,9 +15,11 @@ import java.util.*;
 @WebServlet("/api/search")
 public class SearchServlet extends HttpServlet {
 
-    private static final String URL  = "jdbc:mysql://turntable.proxy.rlwy.net:44955/gmu";
-    private static final String USER = "root";
-    private static final String PASS = "xlLnDOFxroMxPrsYFLbhVVGvdXfOhBQy";
+    private static final String URL =
+    "jdbc:mysql://shortline.proxy.rlwy.net:54581/gmu";
+
+private static final String USER = "root";
+private static final String PASS = "xlLnDOFxroMxPrsYFLbhVVGvdXfOhBQy";
 
     private static final Gson gson = new Gson();
 

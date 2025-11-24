@@ -119,6 +119,14 @@
         <scope>test</scope>
     </dependency>
 
+    <!-- JUnit Vintage engine so legacy JUnit 4 tests run under JUnit Platform -->
+    <dependency>
+        <groupId>org.junit.vintage</groupId>
+        <artifactId>junit-vintage-engine</artifactId>
+        <version>5.10.2</version>
+        <scope>test</scope>
+    </dependency>
+
     </dependencies>
 
     <build>

@@ -14,12 +14,14 @@ import org.json.JSONObject;
 @WebServlet("/api/accounts")
 public class CreateAccountServlet extends HttpServlet {
 
-    private static final String URL = "jdbc:mysql://turntable.proxy.rlwy.net:44955/gmu";
-    private static final String USER = "root";
-    private static final String PASS = "xlLnDOFxroMxPrsYFLbhVVGvdXfOhBQy";
+    private static final String URL =
+    "jdbc:mysql://shortline.proxy.rlwy.net:54581/gmu";
+
+private static final String USER = "root";
+private static final String PASS = "xlLnDOFxroMxPrsYFLbhVVGvdXfOhBQy";
 
     @Override
-	public void doPost(HttpServletRequest req, HttpServletResponse resp)
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
         resp.setContentType("text/plain");
