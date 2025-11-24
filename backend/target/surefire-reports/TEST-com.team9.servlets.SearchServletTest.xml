@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.team9.servlets.SearchServletTest" time="1.192" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.team9.servlets.SearchServletTest" time="1.295" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.9.10-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\Forte\AppData\Local\Temp\surefire9988172415071344567\surefirebooter-20251124062004693_3.jar C:\Users\Forte\AppData\Local\Temp\surefire9988172415071344567 2025-11-24T06-20-04_590-jvmRun1 surefire-20251124062004693_1tmp surefire_0-20251124062004693_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Forte\AppData\Local\Temp\surefire2551610149299351149\surefirebooter-20251124062948412_3.jar C:\Users\Forte\AppData\Local\Temp\surefire2551610149299351149 2025-11-24T06-29-48_283-jvmRun1 surefire-20251124062948412_1tmp surefire_0-20251124062948412_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Forte\OneDrive\Desktop\GMU SE Project\gmu_workspace_v3\cs321-team9\backend\target\test-classes;C:\Users\Forte\OneDrive\Desktop\GMU SE Project\gmu_workspace_v3\cs321-team9\backend\target\classes;C:\Users\Forte\.m2\repository\jakarta\servlet\jakarta.servlet-api\6.0.0\jakarta.servlet-api-6.0.0.jar;C:\Users\Forte\.m2\repository\com\google\code\gson\gson\2.13.2\gson-2.13.2.jar;C:\Users\Forte\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;C:\Users\Forte\.m2\repository\org\json\json\20231013\json-20231013.jar;C:\Users\Forte\.m2\repository\com\mysql\mysql-connector-j\8.2.0\mysql-connector-j-8.2.0.jar;C:\Users\Forte\.m2\repository\com\google\protobuf\protobuf-java\3.21.9\protobuf-java-3.21.9.jar;C:\Users\Forte\.m2\repository\org\eclipse\jetty\jetty-server\11.0.15\jetty-server-11.0.15.jar;C:\Users\Forte\.m2\repository\org\eclipse\jetty\toolchain\jetty-jakarta-servlet-api\5.0.2\jetty-jakarta-servlet-api-5.0.2.jar;C:\Users\Forte\.m2\repository\org\eclipse\jetty\jetty-http\11.0.15\jetty-http-11.0.15.jar;C:\Users\Forte\.m2\repository\org\eclipse\jetty\jetty-io\11.0.15\jetty-io-11.0.15.jar;C:\Users\Forte\.m2\repository\org\eclipse\jetty\jetty-servlet\11.0.15\jetty-servlet-11.0.15.jar;C:\Users\Forte\.m2\repository\org\eclipse\jetty\jetty-security\11.0.15\jetty-security-11.0.15.jar;C:\Users\Forte\.m2\repository\org\eclipse\jetty\jetty-webapp\11.0.15\jetty-webapp-11.0.15.jar;C:\Users\Forte\.m2\repository\org\eclipse\jetty\jetty-xml\11.0.15\jetty-xml-11.0.15.jar;C:\Users\Forte\.m2\repository\org\eclipse\jetty\jetty-servlets\11.0.15\jetty-servlets-11.0.15.jar;C:\Users\Forte\.m2\repository\org\eclipse\jetty\jetty-util\11.0.15\jetty-util-11.0.15.jar;C:\Users\Forte\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\Forte\.m2\repository\org\slf4j\slf4j-simple\2.0.9\slf4j-simple-2.0.9.jar;C:\Users\Forte\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Forte\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Forte\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\Forte\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\Forte\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Forte\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\Forte\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\Forte\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\Forte\.m2\repository\org\mockito\mockito-core\5.20.0\mockito-core-5.20.0.jar;C:\Users\Forte\.m2\repository\net\bytebuddy\byte-buddy\1.17.7\byte-buddy-1.17.7.jar;C:\Users\Forte\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.7\byte-buddy-agent-1.17.7.jar;C:\Users\Forte\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Forte\.m2\repository\org\mockito\mockito-inline\5.2.0\mockito-inline-5.2.0.jar;C:\Users\Forte\.m2\repository\org\junit\vintage\junit-vintage-engine\5.10.2\junit-vintage-engine-5.10.2.jar;C:\Users\Forte\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\Forte\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Forte\AppData\Local\Temp\surefire9988172415071344567\surefirebooter-20251124062004693_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Forte\AppData\Local\Temp\surefire2551610149299351149\surefirebooter-20251124062948412_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.9+10-LTS"/>
@@ -60,7 +60,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testMissingParameters" classname="com.team9.servlets.SearchServletTest" time="0.892">
+  <testcase name="testMissingParameters" classname="com.team9.servlets.SearchServletTest" time="0.984">
     <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
 WARNING: A Java agent has been loaded dynamically (C:\Users\Forte\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.7\byte-buddy-agent-1.17.7.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
@@ -68,5 +68,5 @@ WARNING: If a serviceability tool is not in use, please run with -Djdk.instrumen
 WARNING: Dynamic loading of agents will be disallowed by default in a future release
 ]]></system-err>
   </testcase>
-  <testcase name="testSearchServletReturnsJson" classname="com.team9.servlets.SearchServletTest" time="0.281"/>
+  <testcase name="testSearchServletReturnsJson" classname="com.team9.servlets.SearchServletTest" time="0.291"/>
 </testsuite>
